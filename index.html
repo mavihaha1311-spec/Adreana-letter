@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Message for You 💙</title>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 22px;
+    font-family: Arial, sans-serif;
+    color: #244d7c;
+    background: linear-gradient(
+      135deg, #d9edff, #a9d2ff, #eef7ff
+    );
+  }
+
+  .card {
+    width: 100%;
+    max-width: 420px;
+    padding: 30px 22px;
+    text-align: center;
+    background: rgba(255,255,255,0.9);
+    border: 2px solid #c3e0ff;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px #5b8fc533;
+  }
+
+  .heart {
+    font-size: 48px;
+    animation: float 2s ease-in-out infinite;
+  }
+
+  h1 {
+    color: #397bc0;
+    font-size: 28px;
+  }
+
+  p {
+    line-height: 1.8;
+    font-size: 16px;
+  }
+
+  .letter {
+    padding: 17px;
+    margin: 22px 0;
+    border-radius: 16px;
+    background: #edf6ff;
+    text-align: left;
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 14px;
+    border: none;
+    border-radius: 14px;
+    background: #5799e6;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #3478c5;
+  }
+
+  .secondary {
+    background: #dcecff;
+    color: #285d96;
+  }
+
+  #reply {
+    margin-top: 18px;
+    font-weight: bold;
+    color: #397bc0;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+</style>
+</head>
+
+<body>
+  <main class="card">
+    <div class="heart">💙</div>
+
+    <!-- Change her name here -->
+    <h1>Hi, Adreana! ☁️</h1>
+
+    <p>
+      I made something little and special
+      just for you.
+    </p>
+
+    <div class="letter">
+      <p>Dear Adreana,</p>
+
+      <p>
+        I've genuinely enjoyed getting to know you.
+        Every conversation with you has become
+        something I appreciate, and I'm grateful
+        that we got the chance to know each other.
+      </p>
+
+      <p>
+        I don't want to rush anything or make
+        you feel pressured. I just want to be
+        honest about how I feel.
+      </p>
+
+      <p>
+        So, there's something I'd like to ask you...
+      </p>
+    </div>
+
+    <h2>Would you let me court you? 💙</h2>
+
+    <p>
+      Whatever your answer is, I'll respect it.
+      Please take your time.
+    </p>
+
+    <button onclick="answer('yes')">
+      💙 Yes, you may!
+    </button>
+
+    <button class="secondary"
+      onclick="answer('time')">
+      ☁️ Can I have some time?
+    </button>
+
+    <button class="secondary"
+      onclick="answer('no')">
+      🩵 I'm sorry, but no.
+    </button>
+
+    <div id="reply"></div>
+
+    <p style="font-size:12px; color:#7394b8;">
+      Made with care, just for you. ✨
+    </p>
+  </main>
+
+<script>
+  function answer(choice) {
+    const reply = document.getElementById("reply");
+
+    if (choice === "yes") {
+      reply.textContent =
+        "Thank you for giving me this chance! 💙";
+    } else if (choice === "time") {
+      reply.textContent =
+        "Of course. Take all the time you need. ☁️";
+    } else {
+      reply.textContent =
+        "Thank you for being honest with me. " +
+        "I'll respect your answer. 🩵";
+    }
+  }
+</script>
+</body>
+</html>
